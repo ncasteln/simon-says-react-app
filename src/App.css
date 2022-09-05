@@ -1,38 +1,66 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  background-color: var(--black);
 }
 
-.App-link {
-  color: #61dafb;
+.IntroSection {
+  width: 400px;
+}
+h1 {
+  text-align: center;
+  font-size: 4rem;
+}
+.IntroSection.button {
+  margin: 18px auto;
+  padding: 12px 33px;
+  border-radius: 3px;
+  border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+  margin: 18px;
+}
+
+.Board {
+  display: flex;
+  flex-flow: row wrap;
+  width: 400px;
+}
+
+.ColorButton {
+  width: 200px;
+  height: 200px;
+  border: none;
+  cursor: pointer;
+}
+.ColorButton:active {
+  opacity: 0.8;
+}
+.ColorButton:hover {
+  -webkit-filter: brightness(120%);
+  transition: 0.4s;
+}
+.button.isPlayed {
+  -webkit-filter: brightness(120%);
+  transition: 0.4s;
+}
+.ColorButton.blue {
+  background-color: var(--blue);
+  border-radius: 100% 0 0 0;
+}
+.ColorButton.red {
+  background-color: var(--red);
+  border-radius: 0 100% 0 0;
+}
+.ColorButton.yellow {
+  background-color: var(--yellow);
+  border-radius: 0 0 0 100%;
+}
+.ColorButton.green {
+  background-color: var(--green);
+  border-radius: 0 0 100% 0;
 }
