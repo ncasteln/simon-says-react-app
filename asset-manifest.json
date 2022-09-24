@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.7a7a5571.css",
-    "main.js": "/static/js/main.e6308b5f.js",
-    "static/js/787.76ee888e.chunk.js": "/static/js/787.76ee888e.chunk.js",
-    "index.html": "/index.html",
-    "main.7a7a5571.css.map": "/static/css/main.7a7a5571.css.map",
-    "main.e6308b5f.js.map": "/static/js/main.e6308b5f.js.map",
-    "787.76ee888e.chunk.js.map": "/static/js/787.76ee888e.chunk.js.map"
+    "main.css": "/simon-says-react-app/static/css/main.7a7a5571.css",
+    "main.js": "/simon-says-react-app/static/js/main.7683b581.js",
+    "static/js/787.76ee888e.chunk.js": "/simon-says-react-app/static/js/787.76ee888e.chunk.js",
+    "index.html": "/simon-says-react-app/index.html",
+    "main.7a7a5571.css.map": "/simon-says-react-app/static/css/main.7a7a5571.css.map",
+    "main.7683b581.js.map": "/simon-says-react-app/static/js/main.7683b581.js.map",
+    "787.76ee888e.chunk.js.map": "/simon-says-react-app/static/js/787.76ee888e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7a7a5571.css",
-    "static/js/main.e6308b5f.js"
+    "static/js/main.7683b581.js"
   ]
 }
