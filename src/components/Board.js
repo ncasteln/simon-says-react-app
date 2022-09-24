@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import ColorButton from "./ColorButton";
 
-const Board = ({ setStart, soundBank }) => {
+const Board = ({ setStart }) => {
   const [sequence, setSequence] = useState(null);
   const [pointer, setPointer] = useState(0);
   const [levelCompleted, setLevelCompleted] = useState(false);
@@ -133,8 +133,6 @@ const Board = ({ setStart, soundBank }) => {
       <div className="Board">
         {buttonList}
       </div>
-      {/* <p>Updated sequence {sequence} - </p>
-      <p>Position to guess - {pointer}</p> */}
     </div>
   )
 }
