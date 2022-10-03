@@ -1,5 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ColorButton from "./ColorButton";
+import sound_00 from '../sounds/sound_00.wav'
+import sound_01 from '../sounds/sound_01.wav'
+import sound_02 from '../sounds/sound_02.wav'
+import sound_03 from '../sounds/sound_03.wav'
 
 const Board = ({ setStart }) => {
   const [sequence, setSequence] = useState(null);
@@ -7,37 +11,33 @@ const Board = ({ setStart }) => {
   const [levelCompleted, setLevelCompleted] = useState(false);
   const [isPlayed, setIsPlayed] = useState([]);
   const [disabled, setDisabled] = useState(true);
-
+  
   const data = [
     {
       color: 'blue',
-      src: '/sounds/sound-00.wav'
+      src: sound_00
     },
     {
       color: 'red',
-      src: '/sounds/sound-01.wav'
+      src: sound_01
     },
     {
       color: 'yellow',
-      src: '/sounds/sound-02.wav'
+      src: sound_02
     },
     {
       color: 'green',
-      src: '/sounds/sound-03.wav'
+      src: sound_03
     },
   ];
 
   const compareSequences = (playerInput) => {
-    console.log(`You had to guess ${sequence[pointer]} and you selected ${playerInput}}`)
     if (playerInput === sequence[pointer]) {
-      console.log('Right move!');
       setPointer(oldPointer => oldPointer + 1);
       if (pointer === sequence.length - 1) {
         setLevelCompleted(true);
-        console.log(`Level Completed: ${levelCompleted}`);
       }
     } else {
-      console.log('Wrong move!');
       return false;
     }
     return true;
@@ -77,14 +77,13 @@ const Board = ({ setStart }) => {
       setDisabled(true);
       setIsPlayed(data[sequence[0]].color);
       const audio = new Audio(data[sequence[0]].src);
-      audio.play();
+      audio.play()
       audio.onended = function() {
         setIsPlayed(false)
         if (i < sequence.length) {
           setIsPlayed(data[sequence[i]].color)
           audio.src = data[sequence[i]].src;
           audio.play();
-          console.log(`Played ${audio.src}`)
           i++;
         }
       };
@@ -106,7 +105,6 @@ const Board = ({ setStart }) => {
   useEffect(() => {
     if(sequence) {
       playSequence();
-      console.log(`Played the sequence ${sequence}`);
     }
   }, [sequence]);
   

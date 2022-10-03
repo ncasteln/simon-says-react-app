@@ -1,0 +1,18 @@
+[
+  {
+    "color": 'blue',
+    "src": sound_00
+  },
+  {
+    "color": 'red',
+    "src": sound_01
+  },
+  {
+    "color": 'yellow',
+    "src": sound_02
+  },
+  {
+    "color": 'green',
+    "src": sound_03
+  },
+];
